@@ -11,7 +11,7 @@ window.onscroll = function(){
 
 document.querySelector('.go-top-container')
 .addEventListener('click', () =>{
-    window.scrollTop({
+    window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });

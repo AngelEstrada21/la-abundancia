@@ -73,13 +73,13 @@
 
 .show .go-top-button{
     animation: popup .3s ease-in-out;
-    width: 6.6rem;
-    height: 6.6rem;
+    width: 5.5rem;
+    height: 5.5rem;
     z-index: 11;
 }
 
 .show i{
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0);
 }
 
 @keyframes popup {
@@ -92,7 +92,7 @@
         height: 8rem;
     }
     100%{
-        width: 6.6rem;
-        height: 6.6rem;
+        width: 5.5rem;
+        height: 5.5rem;
     }
 }
