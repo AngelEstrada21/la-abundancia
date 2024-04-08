@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+nav {
+    background-color: blue;
+}
+/* Cuerpo del index */
+body {
+    height: 300vh;
+    background-color:white;
+    
+}
+
+/* Go Top */
+
+.go-top-container{
+    position: fixed; /* Posicion del boton */
+    bottom: 4rem; 
+    right: 4rem; 
+    width: 6.6rem; /* Anchura del boton */
+    height: 6.6rem; /* Altura del boton */
+    z-index: -1; /* Tiempo de duracion del boton */
+}
+
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background: #2071b7;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+
+.go-top-button i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .go-top-button{
+    animation: popup .3s ease-in-out;
+    width: 5.5rem;
+    height: 5.5rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes popup {
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 8rem;
+        height: 8rem;
+    }
+    100%{
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+}
+/* Resolucion */
+.resolucion{
+    width: 99%;
+    text-align: center;
+}
+/* Escritorio */
+@media (max-width:767xp){
+    .desktop{
+        display: none;
+    }
+    .tablet{
+        display: none;
+    }
+}
+/* Tablet */
+@media (max-width:768xp) and (max-width:990xp){
+    .desktop{
+        display: none;
+    }
+    .movil{
+        display: none;
+    }
+}
+/* Movil */
+@media (max-width:991xp){
+    .tablet{
+        display: none;
+    }
+    .movil{
+        display: none;
+    }
+}
