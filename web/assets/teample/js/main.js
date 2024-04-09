@@ -17,3 +17,9 @@ if (element) {
 } else {
     console.error("Elemento no encontrado");
 }
+
+$(document).on('show.bs.modal', '.modal', function () {
+    if ($(".modal-backdrop").length > -1) {
+        $(".modal-backdrop").not(':first').remove();
+    }
+});
