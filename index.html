@@ -6,16 +6,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Abundancia</title>
+  <style>
+    .navbar {
+      background-color: #007bff;
+      /* Color de fondo azul */
+    }
+
+    .nav-link {
+      color: #ffffff;
+      /* Color de texto blanco */
+    }
+
+    .modal-backdrop {
+      display: none !important;
+    }
+  </style>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="web/assets/css/bootstrap.css">
   <link rel="stylesheet" href="web/assets/teample/css/estilos.css">
+  <link rel="stylesheet" href="web/assets/css/bootstrap-grid.min.css" rel="stylesheet">
 </head>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G80XG3PM0V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-G80XG3PM0V');
@@ -43,7 +59,7 @@
   <div class="container-sm">
     <div class="go-top-container">
       <div class="go-top-button">
-        <i class="fas fa-angle-up"></i>
+        <span style="font-size: 24px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">&#9650;</span>
       </div>
     </div>
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
@@ -69,41 +85,23 @@
               <div class="card-body">
                 <h5 class="card-title">SAN JUDAS TADEO</h5>
                 <p class="card-text">Detalles del evento</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Ver mas
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventoModal">
+                  Ver más
                 </button>
               </div>
             </div>
             <br>
           </div>
+
           <div class="carousel-item" data-bs-interval="10000">
             <img src="web/assets/img/virgen_de_guadalupe.jpg" class="d-block w-100" alt="...">
             <div class="card text-center">
               <div class="card-body">
                 <h5 class="card-title">Virgen de guadalupe</h5>
                 <p class="card-text">Detalles del evento</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary">
                   Ver mas
                 </button>
-                <!-- Inicio de los Modales -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Fin de los Modales -->
               </div>
             </div>
             <br>
@@ -114,28 +112,9 @@
               <div class="card-body">
                 <h5 class="card-title">Nacimiento del niño Jesus</h5>
                 <p class="card-text">Detalles del evento</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary">
                   Ver mas
                 </button>
-                <!-- Inicio de los Modales -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Fin de los Modales -->
               </div>
             </div>
             <br>
@@ -146,28 +125,9 @@
               <div class="card-body">
                 <h5 class="card-title">Año nuevo chino</h5>
                 <p class="card-text">Detalles del evento</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary">
                   Ver mas
                 </button>
-                <!-- Inicio de los Modales -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        ...
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Fin de los Modales -->
               </div>
             </div>
             <br>
@@ -183,6 +143,25 @@
         </button>
       </div>
       <!-- Fin del Carrusel -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="eventoModal" tabindex="-1" aria-labelledby="eventoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="eventoModalLabel">Detalles del evento</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Aquí puedes agregar más detalles del evento.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin del modal -->
 
       <h4 id="Productos">Productos</h4>
 
@@ -208,28 +187,9 @@
                   <div class="card-body align-items-center">
                     <h5 class="card-title">Ven a mi</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto1">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="#Producto1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -239,28 +199,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Yo domino a mi patron</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto2">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -270,28 +211,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven a mi</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto3">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto3" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -301,28 +223,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven dinero</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto4">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto4" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -338,28 +241,9 @@
                   <div class="card-body align-items-center">
                     <h5 class="card-title">Ven a mi</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto5">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto5" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -369,28 +253,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Yo domino a mi patron</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto6">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto6" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -400,28 +265,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven a mi</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto7">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto7" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -431,28 +277,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven dinero</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto8">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto8" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -479,28 +306,9 @@
                   <div class="card-body align-items-center">
                     <h5 class="card-title">Ven a mi</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto9">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto9" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -510,28 +318,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Yo domino a mi patron</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto10">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto10" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -541,28 +330,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven a mi</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto11">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto11" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -572,28 +342,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven dinero</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto12">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto12" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -612,25 +363,6 @@
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto13">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto13" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -640,28 +372,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Yo domino a mi patron</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto14">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto14" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -671,28 +384,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven a mi</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto15">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto15" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -702,28 +396,9 @@
                   <div class="card-body">
                     <h5 class="card-title">Ven dinero</h5>
                     <p class="card-text">Este producto sirve ...</p>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Producto16">
+                    <button type="button" class="btn btn-primary">
                       Ver mas
                     </button>
-                    <!-- Inicio de los Modales -->
-                    <div class="modal fade" id="Producto16" tabindex="-1" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            ...
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de los Modales -->
                   </div>
                 </div>
               </div>
@@ -750,37 +425,24 @@
           y disfrutar de la rica cultura local. Su historia está entrelazada con la historia misma de la ciudad,
           y sigue siendo un lugar de vital importancia en la vida cotidiana de sus habitantes.</p>
       </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d558.8700068742467!2d-92.9143484897475!3d17.996285330061802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd840ae5699a7%3A0x229c08af4bd4f6a9!2zTWVyY2FkbyBQw7pibGljbyAnSm9zw6kgTWFyw61hIFBpbm8gU3XDoXJleic!5e0!3m2!1ses-419!2smx!4v1712601076723!5m2!1ses-419!2smx" width="1289" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe title="Mapa de La Abundancia"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d558.8700068742467!2d-92.9143484897475!3d17.996285330061802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85edd840ae5699a7%3A0x229c08af4bd4f6a9!2zTWVyY2FkbyBQw7pibGljbyAnSm9zw6kgTWFyw61hIFBpbm8gU3XDoXJleic!5e0!3m2!1ses-419!2smx!4v1712601076723!5m2!1ses-419!2smx"
+        width="1289" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     </div>
   </div>
-  <!-- Inicio de los Modales -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">San Judas tadeo</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Informacion de san judas tadeo
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fin de los Modales -->
   <!-- Fin del container -->
+
+
 
   <!-- Optional JavaScript; choose one of the two! -->
   <script src="web/assets/js/bootstrap.bundle.js"></script>
   <script src="web/assets/teample/js/gotop.js"></script>
-
-
-
-
 </body>
-
+<footer class="footer fixed-bottom bg-dark text-light text-center">
+  <div class="container">
+    <span class="text-muted">© 2024 La Abundancia</span>
+  </div>
+</footer>
 </html>
